@@ -1,4 +1,4 @@
-/* --- GLOBAL STYLES --- */
+/* --- CẤU HÌNH CHUNG --- */
 * {
   margin: 0;
   padding: 0;
@@ -8,10 +8,10 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+  overflow-x: hidden;
 }
 
-/* Custom Scrollbar */
+/* Thanh cuộn đẹp */
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -21,17 +21,17 @@ html {
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background: linear-gradient(to top, #c72092, #6c14d0);
+  background: linear-gradient(to top, #c72092, #320466);
 }
 
-/* --- MAIN SECTION (BANNER) --- */
+/* --- BANNER CHÍNH & HÌNH NỀN --- */
 section {
   width: 100%;
   height: 100vh;
   background-image: url(image/bg1.png);
   background-size: cover;
   background-position: center;
-  background-attachment: scroll; /* Important for mobile fix */
+  background-attachment: scroll;
 }
 
 /* --- NAVBAR --- */
@@ -46,10 +46,9 @@ section nav {
   left: 0;
   right: 0;
   z-index: 100;
-  height: 70px; /* Fixed height for better layout control */
+  height: 70px;
 }
 
-/* Logo Styling */
 section nav .logo {
   display: flex;
   align-items: center;
@@ -68,7 +67,7 @@ section nav .logo img {
 
 section nav .logo h1 {
   font-size: 35px;
-  color: #c72092;
+  color: #d62aa0;
   margin: 0;
   line-height: 1;
 }
@@ -78,7 +77,6 @@ section nav .logo span {
   text-decoration: underline;
 }
 
-/* Navigation Links */
 section nav ul li {
   display: inline-block;
   margin: 0 15px;
@@ -96,7 +94,6 @@ section nav ul li a:hover {
   color: #c72092;
 }
 
-/* Navbar Icons */
 section nav .icons {
   display: flex;
   align-items: center;
@@ -114,7 +111,7 @@ section nav .icons i:hover {
   color: #c72092;
 }
 
-/* User Avatar in Navbar */
+/* Avatar trên Menu */
 .user-avatar img {
   width: 40px;
   height: 40px;
@@ -183,7 +180,7 @@ section .main .button a {
   font-weight: bold;
 }
 
-/* --- PRODUCTS SECTION --- */
+/* --- PRODUCTS --- */
 .products {
   width: 100%;
   padding: 50px 0;
@@ -223,7 +220,6 @@ section .main .button a {
 
 .products .box .card {
   width: 100%;
-  height: auto; /* Allow auto height */
   min-height: 500px;
   box-shadow: 0 0 8px #6c14d0;
   border-radius: 5px;
@@ -273,17 +269,41 @@ section .main .button a {
   display: inline-block;
 }
 
+/* --- CHỈNH SỬA PHẦN CHỌN SIZE (ĐẸP HƠN & CĂN GIỮA) --- */
 .size-container {
-  margin: 10px 0;
+  display: flex; /* Xếp chữ và ô chọn nằm ngang */
+  justify-content: center; /* Căn giữa toàn bộ */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  gap: 10px; /* Khoảng cách giữa chữ và ô chọn */
+  margin: 15px 0; /* Khoảng cách trên dưới */
+}
+
+.size-container label {
+  font-weight: bold;
+  color: #333;
+  margin: 0;
 }
 
 .size-option {
-  padding: 5px 10px;
+  width: auto !important; /* Bỏ width 100% để nhỏ gọn */
+  min-width: 80px; /* Chiều rộng tối thiểu */
+  padding: 5px 10px; /* Khoảng đệm bên trong */
   border: 1px solid #c72092;
-  border-radius: 5px;
+  border-radius: 20px; /* Bo tròn đẹp mắt */
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  background: white;
+  color: #333;
 }
 
-/* --- SERVICES SECTION --- */
+.size-option:focus {
+  border-color: #6c14d0;
+  box-shadow: 0 0 5px rgba(108, 20, 208, 0.3);
+}
+
+/* --- SERVICES --- */
 .services {
   width: 100%;
   padding: 50px 5%;
@@ -343,12 +363,14 @@ section .main .button a {
   line-height: 1.5;
 }
 
-/* --- ABOUT SECTION --- */
-.about {
+/* --- ABOUT & REVIEW --- */
+.about,
+.review {
   padding: 50px 0;
 }
 
-.about h1 {
+.about h1,
+.review h1 {
   font-size: 60px;
   text-align: center;
   text-transform: uppercase;
@@ -361,12 +383,10 @@ section .main .button a {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .image_contaner img {
   width: 400px;
-  max-width: 100%;
   border: 3px solid #6c14d0;
   border-radius: 20px;
   padding: 30px;
@@ -374,7 +394,6 @@ section .main .button a {
 
 .about_text p {
   width: 600px;
-  max-width: 90%;
   padding: 25px 30px;
   border: 2px solid #c72092;
   border-radius: 20px;
@@ -382,20 +401,7 @@ section .main .button a {
   text-align: justify;
 }
 
-/* --- REVIEW SECTION --- */
-.review {
-  padding: 50px 0;
-}
-
-.review h1 {
-  font-size: 60px;
-  text-align: center;
-  text-transform: uppercase;
-  background: linear-gradient(to right, #c72092, #6c14d0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
+/* Review */
 .review_box {
   display: flex;
   flex-wrap: wrap;
@@ -425,7 +431,6 @@ section .main .button a {
   object-fit: cover;
 }
 
-/* Write Review Form */
 .write-review {
   width: 90%;
   max-width: 600px;
@@ -457,7 +462,7 @@ section .main .button a {
   cursor: pointer;
 }
 
-/* --- CART SIDEBAR --- */
+/* Cart Sidebar */
 .cart-icon-container {
   position: relative;
   cursor: pointer;
@@ -551,7 +556,7 @@ section .main .button a {
   display: block;
 }
 
-/* --- PAYMENT PAGE STYLES --- */
+/* Payment Page */
 .payment-nav {
   padding: 20px 5%;
   background: white;
@@ -645,8 +650,7 @@ section .main .button a {
 }
 
 /* ========================================= */
-/* ========================================= */
-/* --- PHẦN QUAN TRỌNG: MOBILE RESPONSIVE --- */
+/* --- MOBILE RESPONSIVE (ĐIỆN THOẠI) --- */
 /* ========================================= */
 @media (max-width: 768px) {
   /* 1. Reset Body & Khung hình */
@@ -659,14 +663,11 @@ section .main .button a {
   section {
     height: auto !important;
     min-height: 100vh;
-
-    /* FIX BACKGROUND: Thu nhỏ ảnh nền lại */
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: top center;
-    background-color: #fff; /* Nền trắng cho phần còn lại */
+    background-color: #fff;
     background-attachment: scroll;
-
     padding-bottom: 60px;
   }
 
@@ -716,7 +717,7 @@ section .main .button a {
   }
 
   section .main .main_content {
-    flex-direction: column;
+    flex-direction: column; /* Quan trọng: Xếp dọc */
     width: 100%;
     position: static;
   }
@@ -734,10 +735,9 @@ section .main .button a {
     font-size: 45px;
     position: static;
     margin: 0 0 10px 0;
-    /* Nếu nền trắng làm chữ khó đọc, thêm màu chữ đậm hơn */
     color: #333;
     background: none;
-    -webkit-text-fill-color: initial; /* Bỏ gradient chữ trên mobile cho rõ (tuỳ chọn) */
+    -webkit-text-fill-color: initial;
     background: linear-gradient(to right, #c72092, #6c14d0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -749,7 +749,6 @@ section .main .button a {
     margin: 0;
     font-size: 14px;
     padding: 10px;
-    /* Không cần nền trắng mờ nữa vì background giờ đã nằm phía trên */
     background: transparent;
     color: #555;
   }
@@ -779,8 +778,55 @@ section .main .button a {
     transform: none;
   }
 
-  /* 4. Các phần khác */
-  .products .box,
+  /* --- 4. SẢN PHẨM HIỆN 2 CỘT GỌN GÀNG --- */
+  .products .box {
+    grid-template-columns: repeat(2, 1fr); /* 2 cột đều nhau */
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .products .box .card {
+    padding: 10px;
+    min-height: auto;
+  }
+
+  .products .box .card .image {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .products .box .card .image img {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+  }
+
+  .products .box .card .products_text h2 {
+    font-size: 15px;
+    margin-top: 5px;
+  }
+
+  .products .box .card .products_text h3 {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+
+  .products .box .card .btn {
+    padding: 6px 12px;
+    font-size: 12px;
+    width: 100%;
+  }
+
+  /* Thu nhỏ ô chọn size */
+  .size-option {
+    padding: 2px;
+    font-size: 12px;
+    width: 100%;
+  }
+
+  /* Các phần khác giữ nguyên 1 cột */
   .services_cards {
     grid-template-columns: 1fr;
     padding: 0 15px;
