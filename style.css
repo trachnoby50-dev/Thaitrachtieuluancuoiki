@@ -668,3 +668,79 @@ section nav .logo span {
     grid-template-columns: 1fr; /* Xếp dọc các ô dịch vụ */
   }
 }
+/* --- FIX LỖI RESPONSIVE MOBILE (Dán vào cuối style.css) --- */
+@media (max-width: 768px) {
+  /* 1. Reset lại chiều cao và căn lề cho phần Main */
+  section .main {
+    height: auto; /* Để chiều cao tự động co giãn theo nội dung */
+    min-height: 100vh; /* Ít nhất phải cao bằng màn hình */
+    padding-top: 100px; /* Cách menu ra để không bị che */
+    padding-bottom: 50px;
+    background-position: center top; /* Chỉnh lại vị trí hình nền */
+  }
+
+  /* 2. Ép nội dung xếp dọc (Cột) thay vì ngang */
+  section .main .main_content {
+    display: flex;
+    flex-direction: column; /* Quan trọng: Xếp dọc */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* 3. Chỉnh lại khối chữ (Tiêu đề + Mô tả) */
+  section .main .main_content .main_text {
+    width: 100%;
+    text-align: center; /* Căn giữa chữ */
+    margin-bottom: 30px;
+  }
+
+  section .main .main_content .main_text h1 {
+    font-size: 50px; /* Giảm cỡ chữ tiêu đề chút cho vừa */
+    line-height: 1.1;
+    /* Reset vị trí tuyệt đối */
+    position: static;
+    margin: 0 auto;
+    left: auto;
+    top: auto;
+  }
+
+  section .main .main_content .main_text p {
+    width: 90%; /* Để chữ không tràn lề */
+    margin: 15px auto; /* Căn giữa */
+    font-size: 15px;
+    line-height: 1.5;
+    /* Reset vị trí tuyệt đối */
+    position: static;
+    left: auto;
+    top: auto;
+  }
+
+  /* 4. Chỉnh lại Ảnh Giày */
+  section .main .main_content .main_image {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Căn giữa ảnh */
+  }
+
+  section .main .main_content .main_image img {
+    width: 80%; /* Ảnh chiếm 80% màn hình */
+    max-width: 350px; /* Không cho to quá mức */
+    height: auto;
+    /* Reset vị trí tuyệt đối -> Để ảnh nằm dưới chữ */
+    position: static;
+    margin: 20px 0; /* Cách trên dưới */
+    left: auto;
+    top: auto;
+    transform: none; /* Bỏ các hiệu ứng xoay/dịch chuyển cũ nếu có */
+  }
+
+  /* 5. Chỉnh lại Nút Mua Ngay */
+  section .main .button {
+    /* Reset vị trí tuyệt đối */
+    position: static;
+    margin: 0 auto; /* Căn giữa nút */
+    display: inline-block;
+    transform: none;
+  }
+}
