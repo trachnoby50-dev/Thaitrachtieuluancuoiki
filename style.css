@@ -645,10 +645,11 @@ section .main .button a {
 }
 
 /* ========================================= */
-/* --- MOBILE RESPONSIVE & FIXES (Final) --- */
+/* ========================================= */
+/* --- PHẦN QUAN TRỌNG: MOBILE RESPONSIVE --- */
 /* ========================================= */
 @media (max-width: 768px) {
-  /* 1. Reset Frame */
+  /* 1. Reset Body & Khung hình */
   html,
   body {
     width: 100%;
@@ -656,16 +657,22 @@ section .main .button a {
   }
 
   section {
-    height: auto !important; /* Allow dynamic height */
+    height: auto !important;
     min-height: 100vh;
-    background-position: 65% center;
-    background-attachment: scroll; /* Fix zoom/scroll background issues */
-    padding-bottom: 50px;
+
+    /* FIX BACKGROUND: Thu nhỏ ảnh nền lại */
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: #fff; /* Nền trắng cho phần còn lại */
+    background-attachment: scroll;
+
+    padding-bottom: 60px;
   }
 
-  /* 2. Mobile Navbar */
+  /* 2. Menu Mobile */
   section nav {
-    padding: 10px 10px;
+    padding: 0 10px;
     height: 60px;
     width: 100%;
     justify-content: space-between;
@@ -676,75 +683,78 @@ section .main .button a {
     left: 0;
     margin: 0;
   }
-
   section nav .logo img {
     height: 25px;
     margin-right: 5px;
   }
-
   section nav .logo h1 {
     font-size: 16px;
   }
 
+  /* Ẩn menu chữ */
   section nav ul {
-    display: none; /* Hide menu text */
+    display: none;
   }
 
-  /* Icons */
+  /* Icon nhỏ lại */
   section nav .icons i {
-    margin: 0 3px;
     font-size: 16px;
+    margin: 0 4px;
   }
-
   section nav .icons .user-avatar img {
     width: 25px;
     height: 25px;
     margin-left: 5px;
   }
 
-  /* 3. Main Hero Content (Stacked) */
+  /* 3. Phần Main (Sắp xếp Dọc) */
   section .main {
     padding-top: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
   }
 
   section .main .main_content {
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column;
     width: 100%;
     position: static;
   }
 
-  /* Text Block */
+  /* Khối chữ */
   section .main .main_content .main_text {
     position: static;
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
-    padding: 0 15px;
+    padding: 0 10px;
   }
 
   section .main .main_content .main_text h1 {
     font-size: 45px;
-    line-height: 1.1;
-    margin-bottom: 10px;
     position: static;
+    margin: 0 0 10px 0;
+    /* Nếu nền trắng làm chữ khó đọc, thêm màu chữ đậm hơn */
+    color: #333;
+    background: none;
+    -webkit-text-fill-color: initial; /* Bỏ gradient chữ trên mobile cho rõ (tuỳ chọn) */
+    background: linear-gradient(to right, #c72092, #6c14d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   section .main .main_content .main_text p {
-    font-size: 14px;
-    line-height: 1.5;
     width: 100%;
     position: static;
     margin: 0;
-    background: rgba(255, 255, 255, 0.8); /* Readability background */
-    padding: 5px;
-    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px;
+    /* Không cần nền trắng mờ nữa vì background giờ đã nằm phía trên */
+    background: transparent;
+    color: #555;
   }
 
-  /* Image Block */
+  /* Khối ảnh giày */
   section .main .main_content .main_image {
     position: static;
     width: 100%;
@@ -754,34 +764,31 @@ section .main .button a {
   }
 
   section .main .main_content .main_image img {
+    position: static;
     width: 90%;
     max-width: 320px;
     height: auto;
-    position: static;
-    transform: none; /* Remove conflicting transforms */
-    left: auto;
-    top: auto;
+    transform: none;
   }
 
-  /* Shop Now Button */
+  /* Nút Shop Now */
   section .main .button {
     position: static;
     margin: 20px auto;
-    transform: none;
     display: inline-block;
+    transform: none;
   }
 
-  /* 4. Other Sections */
+  /* 4. Các phần khác */
   .products .box,
   .services_cards {
-    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-columns: 1fr;
     padding: 0 15px;
   }
 
   .about_main {
     flex-direction: column;
   }
-
   .about_text p {
     margin-left: 0;
     margin-top: 20px;
@@ -789,6 +796,6 @@ section .main .button a {
   }
 
   .search-container input {
-    width: 100%;
+    width: 90%;
   }
 }
