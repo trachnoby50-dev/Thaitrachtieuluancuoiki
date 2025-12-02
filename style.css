@@ -21,7 +21,7 @@ html {
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background: linear-gradient(to top, #c72092, #320466);
+  background: linear-gradient(to top, #0c0c0c, #7a50aa);
 }
 
 /* --- BANNER CHÍNH & HÌNH NỀN --- */
@@ -67,13 +67,13 @@ section nav .logo img {
 
 section nav .logo h1 {
   font-size: 35px;
-  color: #d62aa0;
+  color: #6d7965;
   margin: 0;
   line-height: 1;
 }
 
 section nav .logo span {
-  color: #6c14d0;
+  color: hsl(0, 0%, 11%);
   text-decoration: underline;
 }
 
@@ -91,7 +91,7 @@ section nav ul li a {
 }
 
 section nav ul li a:hover {
-  color: #c72092;
+  color: #8b8b8b;
 }
 
 section nav .icons {
@@ -108,7 +108,7 @@ section nav .icons i {
 }
 
 section nav .icons i:hover {
-  color: #c72092;
+  color: #666365;
 }
 
 /* Avatar trên Menu */
@@ -118,7 +118,7 @@ section nav .icons i:hover {
   border-radius: 50%;
   object-fit: cover;
   margin-left: 15px;
-  border: 2px solid #c72092;
+  border: 2px solid #1d1c1c;
   cursor: pointer;
   transition: transform 0.3s;
   vertical-align: middle;
@@ -126,7 +126,7 @@ section nav .icons i:hover {
 
 .user-avatar img:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 10px rgba(199, 32, 146, 0.5);
+  box-shadow: 0 0 10px rgba(180, 163, 187, 0.5);
 }
 
 /* --- MAIN CONTENT (HERO) --- */
@@ -140,7 +140,7 @@ section .main .main_content {
 section .main .main_content .main_text h1 {
   font-size: 90px;
   line-height: 1.1;
-  background: linear-gradient(to right, #c72092, #6c14d0);
+  background: linear-gradient(to right, #0f0f0f, #6c14d0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
@@ -170,7 +170,7 @@ section .main .button {
   top: 60%;
   padding: 10px 20px;
   border-radius: 30px;
-  background: linear-gradient(to right, #c72092, #6c14d0);
+  background: linear-gradient(to right, #0c0c0c, #6c14d0);
   cursor: pointer;
 }
 
@@ -189,9 +189,9 @@ section .main .button a {
 
 .products h1 {
   margin: 35px 0;
-  font-size: 60px;
+  font-size: 55px;
   text-transform: uppercase;
-  background: linear-gradient(to right, #c72092, #6c14d0);
+  background: linear-gradient(to right, #0a0a0a, #5c1ca5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -204,7 +204,7 @@ section .main .button a {
 #searchInput {
   padding: 12px 20px;
   width: 350px;
-  border: 2px solid #c72092;
+  border: 2px solid #0e0d0d;
   border-radius: 25px;
   outline: none;
   font-size: 16px;
@@ -221,7 +221,7 @@ section .main .button a {
 .products .box .card {
   width: 100%;
   min-height: 500px;
-  box-shadow: 0 0 8px #6c14d0;
+  box-shadow: 0 0 8px #1d1f35;
   border-radius: 5px;
   text-align: center;
   padding: 20px;
@@ -259,7 +259,7 @@ section .main .button a {
 .products .box .card .products_text .btn {
   text-decoration: none;
   padding: 10px 20px;
-  background: linear-gradient(to right, #c72092, #6c14d0);
+  background: linear-gradient(to right, #0a0a0a, #6c14d0);
   color: white;
   border: none;
   border-radius: 5px;
@@ -288,7 +288,7 @@ section .main .button a {
   width: auto !important; /* Bỏ width 100% để nhỏ gọn */
   min-width: 80px; /* Chiều rộng tối thiểu */
   padding: 5px 10px; /* Khoảng đệm bên trong */
-  border: 1px solid #c72092;
+  border: 1px solid #9e1e08;
   border-radius: 20px; /* Bo tròn đẹp mắt */
   outline: none;
   cursor: pointer;
@@ -299,7 +299,7 @@ section .main .button a {
 }
 
 .size-option:focus {
-  border-color: #6c14d0;
+  border-color: #000000;
   box-shadow: 0 0 5px rgba(108, 20, 208, 0.3);
 }
 
@@ -315,7 +315,7 @@ section .main .button a {
   font-size: 50px;
   margin-bottom: 40px;
   text-transform: uppercase;
-  background: linear-gradient(to right, #c72092, #6c14d0);
+  background: linear-gradient(to right, #141414, #6c14d0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -339,14 +339,14 @@ section .main .button a {
 
 .services_box:hover {
   transform: translateY(-10px);
-  border-bottom: 3px solid #c72092;
+  border-bottom: 3px solid #0e0d0d;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .services_box i {
   font-size: 50px;
   margin-bottom: 15px;
-  background: -webkit-linear-gradient(#c72092, #6c14d0);
+  background: -webkit-linear-gradient(#181617, #6c14d0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -371,10 +371,10 @@ section .main .button a {
 
 .about h1,
 .review h1 {
-  font-size: 60px;
+  font-size: 50px;
   text-align: center;
   text-transform: uppercase;
-  background: linear-gradient(to right, #c72092, #6c14d0);
+  background: linear-gradient(to right, #000000, #6c14d0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -387,7 +387,7 @@ section .main .button a {
 
 .image_contaner img {
   width: 400px;
-  border: 3px solid #6c14d0;
+  border: 3px solid #531b53;
   border-radius: 20px;
   padding: 30px;
 }
@@ -395,7 +395,7 @@ section .main .button a {
 .about_text p {
   width: 600px;
   padding: 25px 30px;
-  border: 2px solid #c72092;
+  border: 2px solid #79195a;
   border-radius: 20px;
   margin-left: 20px;
   text-align: justify;
@@ -454,7 +454,7 @@ section .main .button a {
 }
 
 .write-review button {
-  background: linear-gradient(to right, #c72092, #6c14d0);
+  background: linear-gradient(to right, #0f0f0f, #6c14d0);
   color: white;
   border: none;
   padding: 10px 30px;
@@ -504,7 +504,7 @@ section .main .button a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #c72092;
+  border-bottom: 2px solid #030303;
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
@@ -532,7 +532,7 @@ section .main .button a {
 
 .checkout-btn {
   display: block;
-  background: linear-gradient(to right, #c72092, #6c14d0);
+  background: linear-gradient(to right, #131212, #6c14d0);
   color: white;
   text-align: center;
   padding: 15px;
@@ -615,7 +615,7 @@ section .main .button a {
 .pay-btn {
   width: 100%;
   padding: 15px;
-  background: linear-gradient(to right, #c72092, #6c14d0);
+  background: linear-gradient(to right, #0c0c0c, #6c14d0);
   color: white;
   border: none;
   border-radius: 30px;
@@ -738,7 +738,7 @@ section .main .button a {
     color: #333;
     background: none;
     -webkit-text-fill-color: initial;
-    background: linear-gradient(to right, #c72092, #6c14d0);
+    background: linear-gradient(to right, #111111, #6c14d0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
