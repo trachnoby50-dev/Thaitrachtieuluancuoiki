@@ -149,7 +149,7 @@ function confirmOrder(e) {
     if (cart.length === 0) { alert("Cart is empty!"); return; }
 
     const customerInfo = {
-        name: document.getElementById("cusName").value,
+        name: document.getElementById("cusName").value, 
         phone: document.getElementById("cusPhone").value,
         address: document.getElementById("cusAddr").value,
         note: document.getElementById("cusNote").value,
