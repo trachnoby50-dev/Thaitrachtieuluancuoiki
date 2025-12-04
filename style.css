@@ -845,3 +845,86 @@ section .main .button a {
     width: 90%;
   }
 }
+/* --- CHỈNH SỬA HEADER MỚI (Thêm vào cuối file style.css) --- */
+
+/* 1. Cấu trúc chia 3 phần: Logo - Menu - Bên phải */
+section nav {
+  justify-content: space-between; /* Đẩy đều sang 2 bên */
+  padding: 0 30px; /* Thêm khoảng cách lề trái phải */
+}
+
+/* 2. Khu vực bên phải (Chứa Liên hệ + User) */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 25px; /* Khoảng cách giữa nhóm Liên hệ và nhóm User */
+}
+
+/* 3. Style cho nhóm Liên hệ (FB, TikTok, Phone) */
+.contact-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-right: 25px;
+  border-right: 2px solid #ddd; /* Đường gạch dọc ngăn cách */
+}
+
+.contact-group .social-icon {
+  font-size: 18px;
+  color: #333;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+/* Màu thương hiệu khi hover */
+.contact-group .social-icon.facebook:hover { color: #1877F2; transform: scale(1.1); }
+.contact-group .social-icon.tiktok:hover { color: #000000; transform: scale(1.1); }
+
+.contact-group .phone-number {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #c72092; /* Màu hồng đậm theo theme web */
+}
+
+/* 4. Style cho nhóm User (Giỏ hàng, Avatar...) */
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Các icon user gần nhau hơn */
+}
+
+.user-actions i {
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.user-actions i:hover {
+  color: #6c14d0;
+}
+
+/* --- RESPONSIVE MOBILE (Cập nhật phần @media existing) --- */
+/* Thêm đoạn này vào bên trong @media (max-width: 768px) { ... } ở cuối file CSS của bạn */
+
+/* Ẩn nhóm liên hệ trên điện thoại để đỡ rối */
+@media (max-width: 768px) {
+  .contact-group {
+    display: none; 
+  }
+  
+  section nav {
+    padding: 0 10px; /* Reset padding trên mobile */
+  }
+
+  .header-right {
+    gap: 10px;
+  }
+  
+  .user-actions {
+    gap: 10px;
+  }
+}
