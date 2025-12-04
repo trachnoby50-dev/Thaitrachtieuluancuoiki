@@ -877,8 +877,14 @@ section nav {
 }
 
 /* Màu thương hiệu khi hover */
-.contact-group .social-icon.facebook:hover { color: #1877F2; transform: scale(1.1); }
-.contact-group .social-icon.tiktok:hover { color: #000000; transform: scale(1.1); }
+.contact-group .social-icon.facebook:hover {
+  color: #1877f2;
+  transform: scale(1.1);
+}
+.contact-group .social-icon.tiktok:hover {
+  color: #000000;
+  transform: scale(1.1);
+}
 
 .contact-group .phone-number {
   display: flex;
@@ -913,9 +919,9 @@ section nav {
 /* Ẩn nhóm liên hệ trên điện thoại để đỡ rối */
 @media (max-width: 768px) {
   .contact-group {
-    display: none; 
+    display: none;
   }
-  
+
   section nav {
     padding: 0 10px; /* Reset padding trên mobile */
   }
@@ -923,7 +929,7 @@ section nav {
   .header-right {
     gap: 10px;
   }
-  
+
   .user-actions {
     gap: 10px;
   }
