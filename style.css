@@ -934,3 +934,30 @@ section nav {
     gap: 10px;
   }
 }
+/* --- HIỂN THỊ THANH LIÊN HỆ DƯỚI ĐÁY TRÊN ĐIỆN THOẠI --- */
+@media (max-width: 768px) {
+  /* 1. Hiện lại nhóm liên hệ */
+  .contact-group {
+    display: flex;
+    position: fixed; /* Ghim cố định */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+    justify-content: center; /* Căn giữa */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Tạo bóng mờ cho đẹp */
+    z-index: 1000; /* Luôn nổi lên trên cùng */
+    border-right: none; /* Bỏ đường gạch dọc của bản PC */
+  }
+
+  /* 2. Chỉnh lại chữ số điện thoại to hơn chút trên mobile */
+  .contact-group .phone-number span {
+    font-size: 16px;
+  }
+
+  /* 3. Đẩy nội dung trang web lên một chút để không bị thanh này che mất */
+  body {
+    padding-bottom: 50px;
+  }
+}
